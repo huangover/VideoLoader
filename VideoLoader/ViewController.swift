@@ -10,11 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let vm: ViewModel = ViewModel()
+    let button: UIButton = UIButton()
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        button.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
+        view.addSubview(button)
+        button.setTitle("初始化", for: .normal)
+        button.addTarget(self, action: #selector(initButtonTapped), for: .touchUpInside)
+        button.setTitleColor(UIColor.black, for: .normal)
+        
     }
 
+    @objc func initButtonTapped() {
+        vm.initMultiPartUpload()
+    }
 
 }
 

@@ -1,0 +1,6 @@
+framework module Pods_VideoLoader {
+  umbrella header "Pods-VideoLoader-umbrella.h"
+
+  export *
+  module * { export * }
+}

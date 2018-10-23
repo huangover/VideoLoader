@@ -14,21 +14,17 @@ PODS:
   - AFNetworking/Serialization (3.2.0)
   - AFNetworking/UIKit (3.2.0):
     - AFNetworking/NSURLSession
-  - CryptoSwift (0.9.0)
 
 DEPENDENCIES:
   - AFNetworking
-  - CryptoSwift
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
-    - CryptoSwift
 
 SPEC CHECKSUMS:
   AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
-  CryptoSwift: bca8c5b653dcc2d9734409242a070ff53bafac86
 
-PODFILE CHECKSUM: a5619a5ab97e60f25ba76e77a6cd148c11e76c75
+PODFILE CHECKSUM: 802f55fd5c8cb26edc785bbbab6a8cc6f16586ca
 
 COCOAPODS: 1.5.0

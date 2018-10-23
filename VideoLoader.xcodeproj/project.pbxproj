@@ -16,6 +16,7 @@
 		D3FC07C8217DF8D00077E2C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3FC07C6217DF8D00077E2C5 /* LaunchScreen.storyboard */; };
 		D3FC07D3217DF8D00077E2C5 /* VideoLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC07D2217DF8D00077E2C5 /* VideoLoaderTests.swift */; };
 		D3FC07DE217E032D0077E2C5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC07DD217E032D0077E2C5 /* ViewModel.swift */; };
+		D3FC07EA217F6FE90077E2C5 /* String+SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC07E9217F6FE90077E2C5 /* String+SHA1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		D3FC07D2217DF8D00077E2C5 /* VideoLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoLoaderTests.swift; sourceTree = "<group>"; };
 		D3FC07D4217DF8D00077E2C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3FC07DD217E032D0077E2C5 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		D3FC07E5217F6F740077E2C5 /* VideoLoader-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VideoLoader-Bridging-Header.h"; sourceTree = "<group>"; };
+		D3FC07E9217F6FE90077E2C5 /* String+SHA1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+SHA1.swift"; sourceTree = "<group>"; };
 		DB728B2F29D909275B3ECC17 /* Pods-VideoLoader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoLoader.release.xcconfig"; path = "Pods/Target Support Files/Pods-VideoLoader/Pods-VideoLoader.release.xcconfig"; sourceTree = "<group>"; };
 		E0079486F8C3874F655533CA /* Pods_VideoLoaderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoLoaderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8CE68B6D5B71555CB6D2063 /* Pods-VideoLoader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoLoader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VideoLoader/Pods-VideoLoader.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,10 +117,12 @@
 				D3FC07BD217DF8CE0077E2C5 /* AppDelegate.swift */,
 				D3FC07BF217DF8CE0077E2C5 /* ViewController.swift */,
 				D3FC07DD217E032D0077E2C5 /* ViewModel.swift */,
+				D3FC07E9217F6FE90077E2C5 /* String+SHA1.swift */,
 				D3FC07C1217DF8CE0077E2C5 /* Main.storyboard */,
 				D3FC07C4217DF8D00077E2C5 /* Assets.xcassets */,
 				D3FC07C6217DF8D00077E2C5 /* LaunchScreen.storyboard */,
 				D3FC07C9217DF8D00077E2C5 /* Info.plist */,
+				D3FC07E5217F6F740077E2C5 /* VideoLoader-Bridging-Header.h */,
 			);
 			path = VideoLoader;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 				TargetAttributes = {
 					D3FC07B9217DF8CE0077E2C5 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 					D3FC07CD217DF8D00077E2C5 = {
 						CreatedOnToolsVersion = 10.0;
@@ -239,12 +245,10 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-VideoLoader/Pods-VideoLoader-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -297,6 +301,7 @@
 				D3FC07C0217DF8CE0077E2C5 /* ViewController.swift in Sources */,
 				D3FC07DE217E032D0077E2C5 /* ViewModel.swift in Sources */,
 				D3FC07BE217DF8CE0077E2C5 /* AppDelegate.swift in Sources */,
+				D3FC07EA217F6FE90077E2C5 /* String+SHA1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,12 +464,15 @@
 			baseConfigurationReference = E8CE68B6D5B71555CB6D2063 /* Pods-VideoLoader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 496CFRCQ48;
 				INFOPLIST_FILE = VideoLoader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.VideoLoader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VideoLoader/VideoLoader-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -475,12 +483,14 @@
 			baseConfigurationReference = DB728B2F29D909275B3ECC17 /* Pods-VideoLoader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 496CFRCQ48;
 				INFOPLIST_FILE = VideoLoader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.VideoLoader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VideoLoader/VideoLoader-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
